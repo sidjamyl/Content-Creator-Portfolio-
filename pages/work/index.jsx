@@ -16,22 +16,10 @@ const Work = () => {
       link: "#"
     },
     {
-      src: "https://www.w3schools.com/html/movie.mp4",
-      thumbnail: "https://www.w3schools.com/html/img_girl.jpg",
-      description: "Reel 2 : Création Instagram.",
-      link: "https://example.com/reel2"
-    },
-    {
-      src: "https://www.w3schools.com/html/mov_bbb.mp4",
-      thumbnail: "https://www.w3schools.com/html/img_chania.jpg",
-      description: "Reel 3 : Animation verticale.",
-      link: "https://example.com/reel3"
-    },
-    {
-      src: "https://www.w3schools.com/html/movie.mp4",
-      thumbnail: "https://www.w3schools.com/html/img_girl.jpg",
-      description: "Reel 4 : Vidéo créative.",
-      link: "https://example.com/reel4"
+      src: "/0418(2).mp4",
+      thumbnail: "thumb2.jpg",
+      description: "0418(2) : Vidéo locale.",
+      link: "#"
     }
   ];
 
@@ -71,64 +59,62 @@ const Work = () => {
           aria-label="Précédent"
           style={{
             position: 'absolute',
-            left: 'calc(50% - 220px)',
+            left: '50%',
             top: '50%',
-            transform: 'translateY(-50%)',
-            zIndex: 20,
-            background: 'var(--color-accent)',
+            transform: 'translate(-320px, -50%)',
+            zIndex: 100,
+            background: 'transparent',
             border: 'none',
-            borderRadius: '50%',
-            width: 56,
-            height: 56,
-            boxShadow: '0 6px 24px rgba(52,58,64,0.18)',
+            width: 48,
+            height: 48,
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
             cursor: 'pointer',
-            transition: 'box-shadow 0.2s, background 0.2s',
             outline: 'none',
           }}
         >
-          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--color-lightest)" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="11" stroke="var(--color-lightest)" strokeWidth="2" fill="none"/><polyline points="13 17 8 12 13 7" /></svg>
+          <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="3.5" strokeLinecap="round" strokeLinejoin="round">
+            <polyline points="15 18 9 12 15 6" />
+          </svg>
         </button>
         <button
           onClick={goRight}
           aria-label="Suivant"
           style={{
             position: 'absolute',
-            left: 'calc(50% + 220px)',
+            left: '50%',
             top: '50%',
-            transform: 'translateY(-50%)',
-            zIndex: 20,
-            background: 'var(--color-accent)',
+            transform: 'translate(320px, -50%)',
+            zIndex: 100,
+            background: 'transparent',
             border: 'none',
-            borderRadius: '50%',
             width: 56,
             height: 56,
-            boxShadow: '0 6px 24px rgba(52,58,64,0.18)',
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
             cursor: 'pointer',
-            transition: 'box-shadow 0.2s, background 0.2s',
             outline: 'none',
           }}
         >
-          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--color-lightest)" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="11" stroke="var(--color-lightest)" strokeWidth="2" fill="none"/><polyline points="11 7 16 12 11 17" /></svg>
+          <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="3.5" strokeLinecap="round" strokeLinejoin="round">
+            <polyline points="9 6 15 12 9 18" />
+          </svg>
         </button>
         {/* Carrousel vidéos */}
-        <div style={{ width: 340, height: 600, position: 'relative', display: 'flex', alignItems: 'center', justifyContent: 'center', perspective: 1200, overflow: 'visible' }}>
+  <div style={{ width: 320, height: 560, position: 'relative', display: 'flex', alignItems: 'center', justifyContent: 'center', perspective: 1200, overflow: 'visible' }}>
           {/* Vidéo gauche */}
           <CarouselVideo
             key={getIndex(active - 1)}
             video={videos[getIndex(active - 1)]}
-            style={{ position: 'absolute', left: -220, top: 80, zIndex: 1, transform: 'scale(0.5) rotateY(20deg)', filter: 'blur(16px)', opacity: 0.3, width: 340, height: 600, pointerEvents: 'none' }}
+            style={{ position: 'absolute', left: -210, top: 60, zIndex: 1, transform: 'scale(0.5) rotateY(20deg)', filter: 'blur(16px)', opacity: 0.3, width: 320, height: 560, pointerEvents: 'none' }}
           />
           {/* Vidéo droite */}
           <CarouselVideo
             key={getIndex(active + 1)}
             video={videos[getIndex(active + 1)]}
-            style={{ position: 'absolute', left: 220, top: 80, zIndex: 1, transform: 'scale(0.5) rotateY(-20deg)', filter: 'blur(16px)', opacity: 0.3, width: 340, height: 600, pointerEvents: 'none' }}
+            style={{ position: 'absolute', left: 210, top: 60, zIndex: 1, transform: 'scale(0.5) rotateY(-20deg)', filter: 'blur(16px)', opacity: 0.3, width: 320, height: 560, pointerEvents: 'none' }}
           />
           {/* Vidéo centrale avec animation de slide */}
           <div style={{
@@ -136,38 +122,38 @@ const Work = () => {
             left: 0,
             top: 0,
             zIndex: 3,
-            width: 340,
-            height: 600,
+            width: 320,
+            height: 560,
             transition: animating ? 'transform 0.35s cubic-bezier(.4,2,.3,1)' : 'none',
             transform: animating
-              ? `translateX(${direction === -1 ? '-340px' : direction === 1 ? '340px' : '0'})`
+              ? `translateX(${direction === -1 ? '-320px' : direction === 1 ? '320px' : '0'})`
               : 'translateX(0)',
           }}>
             <CarouselVideo
               key={active}
               video={videos[active]}
               isActive
-              style={{ width: 340, height: 600, boxShadow: '0 8px 32px rgba(52,58,64,0.18)' }}
+              style={{ width: 320, height: 560, boxShadow: '0 8px 32px rgba(52,58,64,0.18)' }}
             />
           </div>
           {/* Vidéo suivante qui slide vers le centre */}
           {animating && (
             <div style={{
               position: 'absolute',
-              left: direction === -1 ? 340 : -340,
+              left: direction === -1 ? 320 : -320,
               top: 0,
               zIndex: 2,
-              width: 340,
-              height: 600,
+              width: 320,
+              height: 560,
               transition: 'transform 0.35s cubic-bezier(.4,2,.3,1)',
-              transform: 'translateX(' + (direction === -1 ? '-340px' : '340px') + ')',
+              transform: 'translateX(' + (direction === -1 ? '-320px' : '320px') + ')',
               animation: `slideIn${direction === -1 ? 'Left' : 'Right'} 0.35s forwards`,
             }}>
               <CarouselVideo
                 key={getIndex(active + direction)}
                 video={videos[getIndex(active + direction)]}
                 isActive
-                style={{ width: 340, height: 600, boxShadow: '0 8px 32px rgba(52,58,64,0.18)' }}
+                style={{ width: 320, height: 560, boxShadow: '0 8px 32px rgba(52,58,64,0.18)' }}
               />
             </div>
           )}
@@ -224,13 +210,20 @@ function CarouselVideo({ video, isActive, style }) {
       <video
         ref={videoRef}
         src={video.src}
-        poster={video.thumbnail}
         style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: 24 }}
         {...(isActive ? {} : { muted: true })}
         loop
         playsInline
         controls={isActive}
       />
+      {/* Si la vidéo n'est pas active, afficher une image extraite de la vidéo (frame) à la place */}
+      {!isActive && (
+        <img
+          src={video.src}
+          alt={video.description}
+          style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', objectFit: 'cover', borderRadius: 24, zIndex: 2 }}
+        />
+      )}
       {isActive && hovered && (
         <div style={{ position: 'absolute', top: 0, left: 0, right: 0, background: 'rgba(33,37,41,0.7)', color: 'var(--color-lightest)', padding: '1rem', fontSize: '1.1rem', borderTopLeftRadius: 24, borderTopRightRadius: 24, pointerEvents: 'none', textAlign: 'center', transition: 'opacity 0.3s', opacity: 1 }}>
           {video.description}

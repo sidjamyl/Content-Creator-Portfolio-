@@ -18,11 +18,6 @@ export const navData = [
   { name: "services", path: "/services", Icon: HiRectangleGroup },
   { name: "work", path: "/work", Icon: HiViewColumns },
   {
-    name: "testimonials",
-    path: "/testimonials",
-    Icon: HiChatBubbleBottomCenterText,
-  },
-  {
     name: "contact",
     path: "/contact",
     Icon: HiEnvelope,

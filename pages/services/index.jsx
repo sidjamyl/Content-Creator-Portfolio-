@@ -114,26 +114,8 @@ const Services = () => {
     <div className="min-h-screen bg-primary/30 py-24 flex items-center overflow-y-auto">
       <Circles />
       <div className="container mx-auto">
-        {/* Section d'intro */}
-        <motion.div
-          variants={fadeIn("up", 0.2)}
-          initial="hidden"
-          animate="show"
-          exit="hidden"
-          className="mb-12 text-center"
-        >
-          <h1 className="text-4xl md:text-5xl font-bold text-white mb-4 tracking-tight">
-            <span role="img" aria-label="globe">🌍</span> Nos services <span className="text-accent">.</span>
-          </h1>
-          <p className="max-w-2xl mx-auto text-lg text-white/80">
-            Nous proposons une gamme de services adaptés aux différentes plateformes sociales, avec des packs modulables selon vos besoins et vos objectifs.<br />
-            Que ce soit pour Instagram, TikTok ou LinkedIn, nous concevons et réalisons du contenu original (scripts, tournage, montage, designs), mettons en place des plans de communication et assurons la gestion quotidienne des comptes.<br />
-            Nous travaillons avec notre propre matériel (téléphone, trépieds, micros) et gérons également les campagnes sponsorisées : le suivi et la stratégie sont inclus, mais le budget publicitaire reste à la charge du client.
-          </p>
-        </motion.div>
-
-        {/* Services cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        {/* Réseaux sociaux d'abord */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
           {services.map((service, i) => (
             <motion.div
               key={service.name}
@@ -151,6 +133,24 @@ const Services = () => {
             </motion.div>
           ))}
         </div>
+
+        {/* Section d'intro ensuite, texte plus petit */}
+        <motion.div
+          variants={fadeIn("up", 0.2)}
+          initial="hidden"
+          animate="show"
+          exit="hidden"
+          className="mb-12 text-center"
+        >
+          <h1 className="text-3xl md:text-4xl font-bold text-white mb-4 tracking-tight">
+            <span role="img" aria-label="globe">🌍</span> Nos services <span className="text-accent">.</span>
+          </h1>
+          <p className="max-w-2xl mx-auto text-sm md:text-base text-white/80">
+            Nous proposons une gamme de services adaptés aux différentes plateformes sociales, avec des packs modulables selon vos besoins et vos objectifs.<br />
+            Que ce soit pour Instagram, TikTok ou LinkedIn, nous concevons et réalisons du contenu original (scripts, tournage, montage, designs), mettons en place des plans de communication et assurons la gestion quotidienne des comptes.<br />
+            Nous travaillons avec notre propre matériel (téléphone, trépieds, micros) et gérons également les campagnes sponsorisées : le suivi et la stratégie sont inclus, mais le budget publicitaire reste à la charge du client.
+          </p>
+        </motion.div>
 
         {/* Packs modal */}
         {selected !== null && (
