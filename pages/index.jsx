@@ -20,8 +20,8 @@ const Home = () => {
             exit="hidden"
             className="h1"
           >
-            Transforming Ideas <br /> Into{" "}
-            <span className="text-accent">Digital Reality</span>
+            Sid Jamyl<br /> & {" "}
+            <span className="text-accent"> Medjani Mehdi </span>
           </motion.h1>
 
           {/* subtitle */}
@@ -32,10 +32,7 @@ const Home = () => {
             exit="hidden"
             className="max-w-sm xl:max-w-xl mx-auto xl:mx-0 mb-10 xl:mb-16"
           >
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptate,
-            exercitationem harum, quia nulla temporibus deleniti libero veniam
-            vero beatae numquam ducimus illum ab similique ipsam tempore fugit
-            quod laudantium debitis.
+            Nous sommes deux étudiants algériens passionnés par la création de contenu digital. Nous réalisons principalement des vidéos, des visuels et du contenu écrit pour dynamiser la présence en ligne de nos clients. Notre expertise s’étend à la gestion complète des réseaux sociaux, incluant la planification, la publication et l’interaction avec la communauté. Que vous soyez une entreprise ou un particulier, nous vous accompagnons pour développer votre image et renforcer votre communication digitale.
           </motion.p>
 
           {/* btn */}
@@ -56,11 +53,11 @@ const Home = () => {
       {/* image */}
       <div className="w-[1280px] h-full absolute right-0 bottom-0">
         {/* bg img */}
-        <div
+        {/*<div
           role="img"
           className="bg-none xl:bg-explosion xl:bg-cover xl:bg-right xl:bg-no-repeat w-full h-full absolute mix-blend-color-dodge translate-z-0"
           aria-hidden
-        />
+        />*/}
 
         {/* particles */}
         <ParticlesContainer />
@@ -74,7 +71,7 @@ const Home = () => {
           transition={{ duration: 1, ease: "easeInOut" }}
           className="w-full h-full max-w-[737px] max-h-[678px] absolute -bottom-32 lg:bottom-0 lg:right-[8%]"
         >
-          <Avatar />
+          {/* <Avatar /> */}
         </motion.div>
       </div>
     </div>

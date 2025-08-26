@@ -2,18 +2,21 @@ import { motion } from "framer-motion";
 import { useState } from "react";
 import CountUp from "react-countup";
 import {
-  FaCss3,
-  FaFigma,
-  FaHtml5,
-  FaJs,
-  FaReact,
-  FaWordpress,
+  FaVideo,
+  FaPenNib,
+  FaCamera,
+  FaPaintBrush,
+  FaProjectDiagram,
+  FaShareAlt,
 } from "react-icons/fa";
 import {
   SiAdobephotoshop,
-  SiAdobexd,
-  SiFramer,
-  SiNextdotjs,
+  SiAdobepremierepro,
+  SiCanva,
+  SiNotion,
+  SiInstagram,
+  SiFacebook,
+  SiYoutube,
 } from "react-icons/si";
 
 import Avatar from "../../components/Avatar";
@@ -26,70 +29,54 @@ export const aboutData = [
     title: "skills",
     info: [
       {
-        title: "Web Development",
-        icons: [
-          FaHtml5,
-          FaCss3,
-          FaJs,
-          FaReact,
-          SiNextdotjs,
-          SiFramer,
-          FaWordpress,
-        ],
+        title: "Montage vidéo",
+        icons: [FaVideo, SiAdobepremierepro],
       },
       {
-        title: "UI/UX Design",
-        icons: [FaFigma, SiAdobexd, SiAdobephotoshop],
+        title: "Ecriture de script",
+        icons: [FaPenNib, SiNotion],
+      },
+      {
+        title: "Tournage de vidéos professionnelles",
+        icons: [FaCamera, SiYoutube],
+      },
+      {
+        title: "Design Graphique",
+        icons: [FaPaintBrush, SiAdobephotoshop, SiCanva],
+      },
+      {
+        title: "Réalisation de plan de communication",
+        icons: [FaProjectDiagram, SiNotion],
+      },
+      {
+        title: "Gestion des reseaux sociaux",
+        icons: [FaShareAlt, SiInstagram, SiFacebook],
       },
     ],
-  },
-  {
-    title: "awards",
-    info: [
-      {
-        title: "Webby Awards - Honoree",
-        stage: "2011 - 2012",
-      },
-      {
-        title: "Adobe Design Achievement Awards - Finalist",
-        stage: "2009 - 2010",
-      },
-    ],
+
   },
   {
     title: "experience",
     info: [
       {
-        title: "UX/UI Designer - XYZ Company",
-        stage: "2012 - 2023",
+        title: "Sid Jamyl : Responsable de la structure Communication et Multimedia - ETIC CLUB",
+        stage: "2024  2025",
       },
       {
-        title: "Web Developer - ABC Agency",
-        stage: "2010 - 2012",
+        title: "Sid Jamyl : Coordinateur de la Communication durant le mois du ramadan - ETIC CLUB ",
+        stage: "2023  2023",
       },
       {
-        title: "Intern - DEF Corporation",
-        stage: "2008 - 2010",
+        title: "Mehdi Mejdani : Responsable de la sous structure production - ETIC CLUB",
+        stage: "2024  2025",
+      },
+      {
+        title: "Sid Jamyl et Mehdi Mejdani : Responsable de la communication - Safir Consulting",
+        stage: "2025  now",
       },
     ],
   },
-  {
-    title: "credentials",
-    info: [
-      {
-        title: "Web Development - ABC University, LA, CA",
-        stage: "2011",
-      },
-      {
-        title: "Computer Science Diploma - AV Technical Institute",
-        stage: "2009",
-      },
-      {
-        title: "Certified Graphic Designer - ABC Institute, Los Angeles, CA",
-        stage: "2006",
-      },
-    ],
-  },
+
 ];
 
 const About = () => {
@@ -107,7 +94,7 @@ const About = () => {
         exit="hidden"
         className="hidden xl:flex absolute bottom-0 -left-[370px]"
       >
-        <Avatar />
+      
       </motion.div>
 
       <div className="container mx-auto h-full flex flex-col items-center xl:flex-row gap-x-6">
@@ -120,8 +107,8 @@ const About = () => {
             exit="hidden"
             className="h2"
           >
-            Captivating <span className="text-accent">stories</span> birth
-            magnificent designs.
+            Notre vision <span className="text-accent">, votre univers</span> donnons
+            vie à votre image.
           </motion.h2>
           <motion.p
             variants={fadeIn("right", 0.4)}
@@ -129,9 +116,7 @@ const About = () => {
             animate="show"
             className="max-w-[500px] mx-auto xl:mx-0 mb-6 xl:mb-12 px-2 xl:px-0"
           >
-            10 years ago, I begin freelancing as a developer. Since then, I've
-            done remote work for agencies, consulted for startups, and
-            collabrated on digital products for business and consumer use.
+            Avec plus de trois ans d’expérience, nous avons réalisé un grand nombre de vidéos, aussi bien dans un contexte étudiant qu’en entreprise. Notre maîtrise des réseaux sociaux et des techniques avancées de création de contenu nous permet de concevoir des projets percutants, adaptés aux tendances et aux besoins spécifiques de chaque client.
           </motion.p>
 
           {/* counters */}
@@ -139,49 +124,64 @@ const About = () => {
             variants={fadeIn("right", 0.6)}
             initial="hidden"
             animate="show"
-            className="hidden md:flex md:max-w-xl xl:max-w-none mx-auto xl:mx-0 mb-8"
+            className="hidden md:flex md:max-w-xl xl:max-w-none mx-auto xl:mx-0 mb-8 "
           >
-            <div className="flex flex-1 xl:gap-x-6">
+            <div className="flex flex-1 xl:gap-x-8">
               {/* experience */}
-              <div className="relative flex-1 after:w-[1px] after:h-full after:bg-white/10 after:absolute after:top-0 after:right-0">
+              <div className="relative flex-1  after:bg-white/10 after:absolute after:top-0 after:right-0  ml-8">
                 <div className="text-2xl xl:text-4xl font-extrabold text-accent mb-2">
-                  <CountUp start={0} end={10} duration={5} />
+                  <CountUp start={0} end={3} duration={5} />
                 </div>
                 <div className="text-xs uppercase tracking-[1px] leading-[1.4] max-w-[100px]">
-                  Years of experience.
+                 Année d'éxperience 
                 </div>
               </div>
 
               {/* clients */}
-              <div className="relative flex-1 after:w-[1px] after:h-full after:bg-white/10 after:absolute after:top-0 after:right-0">
+              <div className="relative flex-1  after:bg-white/10 after:absolute after:top-0 after:right-0">
                 <div className="text-2xl xl:text-4xl font-extrabold text-accent mb-2">
-                  <CountUp start={0} end={250} duration={5} />
+                  <CountUp start={0} end={187} duration={5} />
                 </div>
                 <div className="text-xs uppercase tracking-[1px] leading-[1.4] max-w-[100px]">
-                  Satisfied clients.
+                 Vidéo réalisées 
                 </div>
               </div>
 
               {/* projects */}
-              <div className="relative flex-1 after:w-[1px] after:h-full after:bg-white/10 after:absolute after:top-0 after:right-0">
+              <div className="relative flex-1  after:bg-white/10 after:absolute after:top-0 after:right-0">
                 <div className="text-2xl xl:text-4xl font-extrabold text-accent mb-2">
-                  <CountUp start={0} end={650} duration={5} />
+                  <CountUp start={0} end={87} duration={5} />
                 </div>
                 <div className="text-xs uppercase tracking-[1px] leading-[1.4] max-w-[100px]">
-                  Finished projects.
+                  Vidéo montées
+                </div>
+              </div>
+              <div className="relative flex-1  after:bg-white/10 after:absolute after:top-0 after:right-0">
+                <div className="text-2xl xl:text-4xl font-extrabold text-accent mb-2">
+                  <CountUp start={0} end={51} duration={5} />
+                </div>
+                <div className="text-xs uppercase tracking-[1px] leading-[1.4] max-w-[100px]">
+                  Apparition dans les vidéos 
+                </div>
+              </div>
+
+              <div className="relative flex-1  after:bg-white/10 after:absolute after:top-0 after:right-0">
+                <div className="text-2xl xl:text-4xl font-extrabold text-accent mb-2">
+                  <CountUp start={0} end={33} duration={5} />
+                </div>
+                <div className="text-xs uppercase tracking-[1px] leading-[1.4] max-w-[100px]">
+                  Design réalisés 
                 </div>
               </div>
 
               {/* awards */}
-              <div className="relative flex-1">
-                <div className="text-2xl xl:text-4xl font-extrabold text-accent mb-2">
-                  <CountUp start={0} end={8} duration={5} />
-                </div>
-                <div className="text-xs uppercase tracking-[1px] leading-[1.4] max-w-[100px]">
-                  Winning awards.
-                </div>
-              </div>
+              
+              
+              
+
+              
             </div>
+            
           </motion.div>
         </div>
 
@@ -212,12 +212,12 @@ const About = () => {
             {aboutData[index].info.map((item, itemI) => (
               <div
                 key={itemI}
-                className="flex-1 flex flex-col md:flex-row max-w-max gap-x-2 items-center text-center text-white/60"
+                className="flex-1 flex flex-col md:flex-row max-w-max gap-x-2 items-center text-left text-white/60"
               >
                 {/* title */}
-                <div className="font-light mb-2 md:mb-0">{item.title}</div>
+                <div className="font-light mb-2 md:mb-0 text-left">{item.title}</div>
                 <div className="hidden md:flex">-</div>
-                <div>{item.stage}</div>
+                <div className="text-left">{item.stage}</div>
 
                 <div className="flex gap-x-4">
                   {/* icons */}
